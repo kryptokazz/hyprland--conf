@@ -1,0 +1,53 @@
+# List of packages to install with pacman
+pacman_packages=(
+    kitty
+    swaylock
+    waybar
+    python
+    git
+    redshift
+    htop
+    SDL
+    SDL2
+    mullvad-vpn
+    vim
+    gcc
+    ncurses
+    mesa
+    libGL
+    alacritty
+    pgadmin4
+    postgresql
+    unzip
+    curl
+    jq
+    zsh
+    nix
+    ansible
+    libreoffice-fresh
+    mpv
+    firefox
+    keepassxc
+)
+
+# List of packages to install with yay
+yay_packages=(
+    swww
+    bundler
+    fira-code
+    fira-code-symbols
+    mplus-outline-fonts
+    dina-font
+    proggyfonts
+    noto-fonts
+    font-awesome
+    noto-fonts-cjk
+    nerdfonts
+    noto-fonts-emoji
+)
+
+# Install pacman packages
+sudo pacman -Syu "${pacman_packages[@]}"
+
+# Install yay packages
+yay -S "${yay_packages[@]}"
